@@ -1,0 +1,40 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm.value)">
+  <div class="form-group mb-3">
+    <label>Name</label>
+    <input
+      type="name"
+      formControlName="name"
+      class="form-control"
+      aria-describedby="emailHelp"
+    />
+    <small id="nameHelp" class="form-text text-muted">
+      Eg: John Doe
+    </small>
+  </div>
+  <div class="form-group mb-3">
+    <label>Email Address</label>
+    <input
+      type="email"
+      formControlName="email"
+      class="form-control"
+      aria-describedby="emailHelp"
+    />
+    <small id="emailHelp" class="form-text text-muted">
+      We'll never share your email with anyone else.
+    </small>
+  </div>
+  <div class="form-group mb-3">
+    <label>Password</label>
+    <input
+      type="password"
+      formControlName="password"
+      class="form-control"
+      minLength="6"
+      aria-describedby="passwordHelp"
+    />
+    <small id="passwordHelp" class="form-text text-muted">
+      Password should be 6 or more characters
+    </small>
+  </div>
+  <input type="submit" class="btn btn-primary mb-3" value="Submit" />
+</form>

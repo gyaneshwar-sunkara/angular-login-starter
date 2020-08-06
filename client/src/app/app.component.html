@@ -1,0 +1,16 @@
+<div
+  style="
+    padding: 1rem;
+    color: white;
+    background-color: black;
+    text-align: center;
+  "
+>
+  Black Lives Matter
+</div>
+<app-navbar></app-navbar>
+<div class="container-sm mt-5 mb-5">
+  <app-inner-nav-vbar *ngIf="router.url !== '/about'"></app-inner-nav-vbar>
+  <flash-messages></flash-messages>
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,52 @@
+<button
+  (click)="logout()"
+  *ngIf="userService.loggedIn()"
+  class="btn btn-danger ml-5 float-right"
+>
+  Logout
+</button>
+
+<nav>
+  <ul class="nav nav-tabs mb-5">
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        *ngIf="!userService.loggedIn()"
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Login</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        *ngIf="!userService.loggedIn()"
+        routerLink="/register"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Register</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        *ngIf="userService.loggedIn()"
+        routerLink="/update"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Update</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        *ngIf="userService.loggedIn()"
+        routerLink="/delete"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Delete</a
+      >
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,13 @@
+<div>
+  <h1 calss="h5 mb-3">Hello {{ name }},</h1>
+  <p class="mb-3">You can edit your details here</p>
+</div>
+
+<form [formGroup]="updateForm" (ngSubmit)="onSubmit(updateForm.value)">
+  <div class="form-group mb-3">
+    <label>Name</label>
+    <input type="text" formControlName="name" class="form-control mb-3" />
+  </div>
+
+  <input type="submit" class="btn btn-primary mb-3" value="Submit" />
+</form>
