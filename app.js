@@ -31,10 +31,10 @@ if (process.env.NODE_ENV === "development") {
  * Static Assets
  */
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/dist"));
+  app.use(express.static("public"));
 
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "dist", "index.html"));
+    res.sendFile(path.resolve(__dirname, "public", "index.html"));
   });
 }
 
